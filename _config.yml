@@ -11,7 +11,7 @@ author:
 
 gems: ['jekyll-paginate']
 
-paginate:			2
+paginate:			5
 
 copyright-year: 2016
 version:			2.0.0
