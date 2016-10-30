@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<article class="post type-post {% if page.title == "Quote" %} format-quote {% else %} format-standard {% endif %} hentry">
+			{% if page.thumbnail %}
+				<div class="featured-image">
+					<a href="">
+						<img width="960" height="640" src="{{ page.thumbnail }}" alt="{{ page.caption }}" />
+					</a>
+				</div>
+			{% endif %}
+
+			{% if page.video %}
+				<div class="featured-video">
+					<div class="fluid-width-video-wrapper" style="padding-top: 56.25%;">
+						<iframe src="{{ page.video }}" frameborder="0" title="" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
+				</div>
+			{% endif %}
+			<div class="entry-box">
+				{% if page.title == "Quote" %}
+					<div class="featured-image-bg" {% if page.quote-image %} style="background-image: url('{{ page.quote-image }}');" {% endif %}></div>
+				{% endif %}
+
+				<header class="entry-header">
+					{% if page.title == "Quote" %}
+
+					{% else %}
+					<h2 class="entry-title">
+						{{ page.title }}
+					</h2>
+					{% endif %}
+				</header><!-- .entry-header -->
+				<div class="entry-content">
+					{% if page.title == "Quote" %}
+						<blockquote>
+							{{ post.content }}
+
+							<p><cite>- {{ page.quote-author }} -</cite></p>
+
+						</blockquote>
+
+					{% elsif page.title == "Equipe" %}
+
+						{% assign file = site.data.authors %}
+						{% for author in file %}
+							<a id="{{author[0] }}"></a><h3>{{ author[1]["name"] }}</h3>
+
+							<p>{{ author[1]["bio"] }}</p>
+
+							<p>[ {% if author[1]["site"] != "" %} <a href="{{ author[1]["site"] }}" target="_blank">site</a> / {% endif %}<a href="https://twitter.com/{{ author[1]["twitter"] }}" target="_blank">@{{ author[1]["twitter"] }}</a> ]
+
+						{% endfor %}
+
+					{% elsif page.title == "Arquivo" %}
+
+						<div class="archives-list">
+							<h2>Últimas Publicações</h2>
+
+							<ul>
+								{% assign post_list = site.posts | sort: 'date', 'last' %}
+								{% for post in post_list %}
+									<li>
+										<a href="{{ post.url | prepend: site.url | replace: '//', '/' }}">{{ post.title }}</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+
+					{% else %}
+
+						{{ page.content }}
+					{% endif %}
+				</div>
+			</div>
+		</article><!-- article -->

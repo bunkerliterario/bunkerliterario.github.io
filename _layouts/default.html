@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		{% include head.html %}
+
+	</head>
+	<body class="home blog hfeed">
+		<div id="page" class="site">
+			{% include nav.html %}
+
+			{% include header.html %}
+
+			<div id="content" class="site-content">
+				<main id="main" class="site-main inner">
+				
+					{{ content }}
+
+				</main>
+			</div><!-- .site-content -->
+			
+			{% include footer.html %}
+		</div><!-- .site -->
+
+		<script type='text/javascript'>
+		 	var blogboxVars = '';
+		</script>
+		<script type='text/javascript' src='/js/custom.js'></script>
+
+	</body>
+</html>

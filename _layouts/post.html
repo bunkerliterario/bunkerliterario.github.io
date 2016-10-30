@@ -1,0 +1,105 @@
+---
+layout: default
+---
+
+<article class="post type-post {% if page.title == "Quote" %} format-quote {% else %} format-standard {% endif %} hentry">
+			{% if page.thumbnail %}
+				<div class="featured-image">
+					<a href="">
+						<img width="960" height="640" src="{{ page.thumbnail }}" alt="{{ page.caption }}" />
+					</a>
+				</div>
+			{% endif %}
+
+			{% if page.video %}
+				<div class="featured-video">
+					<div class="fluid-width-video-wrapper" style="padding-top: 56.25%;">
+						<iframe src="{{ page.video }}" frameborder="0" title="" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
+				</div>
+			{% endif %}
+			<div class="entry-box">
+				{% if page.title == "Quote" %}
+					<div class="featured-image-bg" {% if page.quote-image %} style="background-image: url('{{ page.quote-image }}');" {% endif %}></div>
+				{% endif %}
+
+				<header class="entry-header">
+					{% if page.title == "Quote" %}
+
+					{% else %}
+					<h2 class="entry-title">
+						{{ page.title }}
+					</h2>
+					{% endif %}
+				<div class="entry-meta">
+						<span class="byline">
+							<span class="author vcard">
+								<span class="screen-reader-text">Autor </span>
+								<a class="url fn n" href="{{ page.author | prepend: "/authors#" | prepend: site.url | replace: '//', '/' }}">
+									{{ site.data.authors[page.author].name }}
+								</a>
+							</span>
+						</span>
+						<span class="posted-on">
+							<span class="screen-reader-text">Publicado em </span>
+							<a href="{{ page.url | prepend: site.url | replace: '//', '/' }}" rel="bookmark">
+								{% assign months = "Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro" | split: "|" %}
+								{% assign m = page.date | date: "%-m" | minus: 1 %}
+								{% assign day = page.date | date: "%d" %}
+								{% assign month = months[m] %}
+								{% assign year = page.date | date: "%Y" %}
+
+								<time class="entry-date published" datetime="{{ year }}-{{ m | plus: 1 }}-{{ day }}T12:00:00-03:00">{{ day }} de {{ month }} de {{ year }}</time>
+							</a>
+						</span>
+						<span class="comments-link">
+							<a href="#">Comentários</a>
+						</span>
+					</div>
+				</header><!-- .entry-header -->
+				<div class="entry-content">
+					{% if page.title == "Quote" %}
+						<blockquote>
+							{{ page.content }}
+
+							<p><cite>- {{ page.quote-author }} -</cite></p>
+
+						</blockquote>
+
+					{% else %}
+
+						{{ page.content }}
+					{% endif %}
+				</div>
+			</div><!-- entry-box -->
+			<div class="author-box">
+				<div class="author-info">
+					<img alt="" src="http://1.gravatar.com/avatar/f180c971dc6776b94dc8e92e33d0257c" class="avatar avatar-135 photo" height="135" width="135" originals="135" scale="2">
+					<h2 class="author-title">
+						Publicado por <a href="#" rel="author">{{ site.data.authors[page.author].name }}</a>
+					</h2>
+					<div class="author-bio">
+						{{ site.data.authors[page.author].bio }}
+					</div>
+				</div>
+			</div>
+		</article><!-- article -->
+		{% if page.comments %}
+			<div id="comments" class="comments-area">
+				<h2 class="comments-title">5 comentários</h2>
+				<div id="disqus_thread"></div>
+				<script>
+					var disqus_config = function () {
+						this.page.url = "{{ page.url | prepend: site.url | replace: '//', '/' }}";
+						this.page.identifier = "{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | remove: " -" | replace: " ", "-" | downcase }}";
+					};
+					(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						s.src = '//bunkerliterario.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
+				</script>
+				<noscript>Por favor, ative o Javascript para visualizar <a href="https://disqus.com/?ref_noscript">os comentários do Disqus.</a></noscript>
+			</div>
+		{% endif %}

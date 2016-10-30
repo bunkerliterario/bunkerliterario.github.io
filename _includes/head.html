@@ -1,0 +1,43 @@
+<meta charset="UTF-8" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<title>
+			{% if page.title == "Home" %}
+				Bunker Literário
+			{% else %}
+				{{ page.title }} | Bunker Literário
+			{% endif %}
+		</title>
+
+		<!-- CSS -->
+
+		<link rel='stylesheet' href='//fonts.googleapis.com/css?family=PT+Serif%3A400%2C400italic%2C700%2C700italic%7COpen+Sans%3A400%2C400italic%2C700%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+		<link rel='stylesheet' href='/css/style.css' type='text/css' media='all' />
+
+		<!-- Icons -->
+
+		<!-- JavaScript -->
+		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.0.0.min.js" integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw=" crossorigin="anonymous"></script>
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="TSS" href="/atom.xml">
+
+		<!-- Video -->
+		<style id="fit-vids-style">
+			.fluid-width-video-wrapper {
+				width: 100%;
+				position: relative;
+				padding: 0;
+			}
+			.fluid-width-video-wrapper iframe,
+			.fluid-width-video-wrapper object,
+			.fluid-width-video-wrapper embed {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		</style>

@@ -1,0 +1,38 @@
+<footer class="site-footer">
+				<div class="inner">
+					<div class="social-links">
+						{% for social in site.data.social %}
+							{% if social.link %}
+								<a href="{{ social.link }}">
+									<i class="fa-{{ social.network }}" aria-hidden="true"></i>
+									<span class="screen-reader-text">{{ social.network }}</span>
+								</a>
+							{% endif %}
+						{% endfor %}
+					</div>
+					<div class="copyright">
+						&copy; {{ site.copyright-year }} <a href="{{ site.url }}" rel="home">{{ site.title }}</a>. Tema por <a href="//justgoodthemes.com/">Justgoodthemes</a>.
+					</div>
+					<a href="#page" id="top-link" class="top-link">
+						<i class="fa-chevron-up" aria-hidden="true"></i>
+						<span class="screen-reader-text">Voltar ao Topo</span>
+					</a>
+				</div><!-- .inner -->
+			</footer><!-- .site-footer -->
+			
+			<div id="site-search" class="site-search">
+				<button id="search-hide" class="search-hide">
+					<span class="icon-plus" aria-hidden="true"></span>
+					<span class="screen-reader-text">Fechar</span>
+				</button>
+				<div class="search-box">
+					<form method="get" class="search-form" action="#" role="search">
+						<label>
+							<span class="screen-reader-text">Pesquisar:</span>
+							<input class="search-field" name="s" type="search" value="" placeholder="Pesquisar por..." />
+						</label>
+						<input type="submit" class="search-submit screen-reader-text" value="Pesquisar" />
+						<div class="search-notes">Pressione Enter / Return para pesquisar</div>
+					</form>
+				</div><!-- .search-box -->
+			</div><!-- .site-search -->
