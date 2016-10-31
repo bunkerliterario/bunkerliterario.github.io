@@ -58,7 +58,7 @@ title: Home
 							</a>
 						</span>
 						<span class="comments-link">
-							<a href="{{ post.url | prepend: site:url | replace: '//', '/' }}#disqus_thread" data-disqus-identifier="{{ post.date | date: "%Y-%m-%d" }}-{{ post.title | remove: " -" | replace: " ", "-" | downcase }}" alt="Comentários"><script id="dsq-count-scr" src="//bunkerliterario.disqus.com/count.js" async></script></a>
+							<a href="{{ post.url | prepend: site.url | replace: '//', '/' }}#disqus_thread" data-disqus-identifier="{{ post.date | date: "%Y-%m-%d" }}-{{ post.title | remove: " -" | replace: " ", "-" | downcase }}" alt="Comentários"><script id="dsq-count-scr" src="//bunkerliterario.disqus.com/count.js" async></script></a>
 						</span>
 					</div>
 				</header><!-- .entry-header -->
