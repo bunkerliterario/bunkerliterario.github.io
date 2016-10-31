@@ -86,7 +86,7 @@ layout: default
 		</article><!-- article -->
 		{% if page.comments %}
 			<div id="comments" class="comments-area">
-				<h2 class="comments-title"><span class="disqus-comment-count" data-disqus-identifier="{{ post.date | date: "%Y-%m-%d" }}-{{ post.title | remove: " -" | replace: " ", "-" | downcase }}"></span></h2>
+				<h2 class="comments-title"><span class="disqus-comment-count" data-disqus-identifier="{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | remove: " -" | replace: " ", "-" | downcase }}"></span></h2>
 				<div id="disqus_thread"></div>
 				<script>
 					var disqus_config = function () {
