@@ -53,7 +53,7 @@ layout: default
 							</a>
 						</span>
 						<span class="comments-link">
-							<a href="https://{{ post.url | prepend: site.url | replace: '//', '/' }}#disqus_thread" data-disqus-identifier="{{ post.date | date: "%Y-%m-%d" }}-{{ post.title | remove: " -" | replace: " ", "-" | downcase }}" alt="Comentários"></a>
+							<a href="https://{{ page.url | prepend: site.url | replace: '//', '/' }}#disqus_thread" data-disqus-identifier="{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | remove: " -" | replace: " ", "-" | downcase }}" alt="Comentários"></a>
 						</span>
 					</div>
 				</header><!-- .entry-header -->
