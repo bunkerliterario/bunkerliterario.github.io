@@ -12,7 +12,7 @@
 							{% if the_page.title != null %} 
 								{% if the_page.layout == "page" %}
 									<li class="menu-item {% if page.url == the_page.url %} current-menu-item {% endif %}">
-										<a href="{{ the_page.url | prepend: site.url | replace: '//', '/' }}">{{ the_page.title }}</a>
+										<a href="https://{{ the_page.url | prepend: site.url | replace: '//', '/' }}">{{ the_page.title }}</a>
 									</li>
 								{% endif %}
 							{% endif %}
