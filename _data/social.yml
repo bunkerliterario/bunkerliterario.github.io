@@ -27,3 +27,6 @@
 
 - network: youtube-play
   link :
+
+- network: envelope
+  link: mailto:bunkerliterario@outlook.com.br
