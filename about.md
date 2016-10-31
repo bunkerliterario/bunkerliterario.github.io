@@ -1,4 +1,6 @@
 ---
 layout: page
-title: Equipe
+title: Sobre
 ---
+
+Teste
