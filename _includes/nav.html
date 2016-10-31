@@ -5,7 +5,7 @@
 					</button>
 					<ul id="nav-menu" class="nav-menu">
 						<li class="menu-item menu-item-home {% if page.url == "/" %} current-menu-item {% endif %}">
-							<a href="{{ site.url }}">Home</a>
+							<a href="https://{{ site.url }}">Home</a>
 						</li>
 						{% assign site_pages = site.pages | sort: 'title' %}
 						{% for the_page in site_pages %}
