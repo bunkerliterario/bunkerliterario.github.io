@@ -45,7 +45,7 @@ layout: default
 
 						{% assign file = site.data.authors %}
 						{% for author in file %}
-							<a id="{{author[0] }}"></a><h3>{{ author[1]["name"] }}</h3>
+							<a id="{{ author[0] }}"></a><h3>{{ author[1]["name"] }}</h3>
 
 							<p>{{ author[1]["bio"] }}</p>
 
@@ -62,7 +62,7 @@ layout: default
 								{% assign post_list = site.posts | sort: 'date', 'last' %}
 								{% for post in post_list %}
 									<li>
-										<a href="{{ post.url | prepend: site.url | replace: '//', '/' }}">{{ post.title }}</a>
+										<a href="https://{{ post.url | prepend: site.url | replace: '//', '/' }}">{{ post.title }}</a>
 									</li>
 								{% endfor %}
 							</ul>

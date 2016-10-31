@@ -31,7 +31,7 @@ title: Home
 
 					{% else %}
 					<h2 class="entry-title">
-						<a href="{{ post.url | prepend: site.url | replace: '//', '/' }}" rel="bookmark">
+						<a href="https://{{ post.url | prepend: site.url | replace: '//', '/' }}" rel="bookmark">
 							{{ post.title }}
 						</a>
 					</h2>
@@ -40,14 +40,14 @@ title: Home
 						<span class="byline">
 							<span class="author vcard">
 								<span class="screen-reader-text">Autor </span>
-								<a class="url fn n" href="{{ post.author | prepend: "/authors#" | prepend: site.url | replace: '//', '/' }}">
+								<a class="url fn n" href="https://{{ post.author | prepend: "/authors#" | prepend: site.url | replace: '//', '/' }}">
 									{{ site.data.authors[post.author].name }}
 								</a>
 							</span>
 						</span>
 						<span class="posted-on">
 							<span class="screen-reader-text">Publicado em </span>
-							<a href="{{ post.url | prepend: site.url | replace: '//', '/' }}" rel="bookmark">
+							<a href="https://{{ post.url | prepend: site.url | replace: '//', '/' }}" rel="bookmark">
 								{% assign months = "Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro" | split: "|" %}
 								{% assign m = post.date | date: "%-m" | minus: 1 %}
 								{% assign day = post.date | date: "%d" %}
@@ -58,7 +58,7 @@ title: Home
 							</a>
 						</span>
 						<span class="comments-link">
-							<a href="{{ post.url | prepend: site.url | replace: '//', '/' }}#disqus_thread" data-disqus-identifier="{{ post.date | date: "%Y-%m-%d" }}-{{ post.title | remove: " -" | replace: " ", "-" | downcase }}" alt="Comentários"></a>
+							<a href="https://{{ post.url | prepend: site.url | replace: '//', '/' }}#disqus_thread" data-disqus-identifier="{{ post.date | date: "%Y-%m-%d" }}-{{ post.title | remove: " -" | replace: " ", "-" | downcase }}" alt="Comentários"></a>
 						</span>
 					</div>
 				</header><!-- .entry-header -->
@@ -68,7 +68,7 @@ title: Home
 
 						{{ post.short }}
 
-						<p><span class="read-more"> <a href="{{ post.url | prepend: site.url | replace: '//', '/' }}" class="more-link">Leia Mais</a></span></p>
+						<p><span class="read-more"> <a href="https://{{ post.url | prepend: site.url | replace: '//', '/' }}" class="more-link">Leia Mais</a></span></p>
 
 					{% else %}
 
@@ -96,21 +96,21 @@ title: Home
 	<nav class="pagination navigation">
 		<div class="nav-links">
 			{% if paginator.previous_page %}
-				<a class="previous page-numbers" href="{{ paginator.previous_page_path | prepend: site.url | replace: '//', '/' }}"><i class="fa-chevron-left"></i> Anteriores</a>
+				<a class="previous page-numbers" href="https://{{ paginator.previous_page_path | prepend: site.url | replace: '//', '/' }}"><i class="fa-chevron-left"></i> Anteriores</a>
 			{% endif %}
 
 			{% for page in (1..paginator.total_pages) %}
 				{% if page == paginator.page %}
 					<span class="page-numbers current">{{ page }}</span>
 				{% elsif page == 1 %}
-					<a class="page-numbers" href="{{ paginator.previous_page_path | prepend: site.url | replace: '//', '/'}}">{{ page }}</a>
+					<a class="page-numbers" href="https://{{ paginator.previous_page_path | prepend: site.url | replace: '//', '/'}}">{{ page }}</a>
 				{% else %}
-					<a class="page-numbers" href="{{ site.paginate_path | prepend: site.url | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+					<a class="page-numbers" href="https://{{ site.paginate_path | prepend: site.url | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
 				{% endif %}
 			{% endfor %}
 
 			{% if paginator.next_page %}
-				<a class="page-numbers" href="{{ paginator.next_page_path | prepend: site.url | replace: '//', '/' }}">Próxima <i class="fa-chevron-right"></i></a>
+				<a class="page-numbers" href="https://{{ paginator.next_page_path | prepend: site.url | replace: '//', '/' }}">Próxima <i class="fa-chevron-right"></i></a>
 			{% endif %}
 		</div>
 	</nav>

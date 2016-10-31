@@ -35,7 +35,7 @@ layout: default
 						<span class="byline">
 							<span class="author vcard">
 								<span class="screen-reader-text">Autor </span>
-								<a class="url fn n" href="{{ page.author | prepend: "/authors#" | prepend: site.url | replace: '//', '/' }}">
+								<a class="url fn n" href="https://{{ page.author | prepend: "/authors#" | prepend: site.url | replace: '//', '/' }}">
 									{{ site.data.authors[page.author].name }}
 								</a>
 							</span>
@@ -53,7 +53,7 @@ layout: default
 							</a>
 						</span>
 						<span class="comments-link">
-							<a href="#">Comentários</a>
+							<a href="https://{{ post.url | prepend: site.url | replace: '//', '/' }}#disqus_thread" data-disqus-identifier="{{ post.date | date: "%Y-%m-%d" }}-{{ post.title | remove: " -" | replace: " ", "-" | downcase }}" alt="Comentários"></a>
 						</span>
 					</div>
 				</header><!-- .entry-header -->
@@ -76,7 +76,7 @@ layout: default
 				<div class="author-info">
 					<img alt="" src="http://1.gravatar.com/avatar/f180c971dc6776b94dc8e92e33d0257c" class="avatar avatar-135 photo" height="135" width="135" originals="135" scale="2">
 					<h2 class="author-title">
-						Publicado por <a href="#" rel="author">{{ site.data.authors[page.author].name }}</a>
+						Publicado por <a href="https://{ page.author | prepend: "/authors#" | prepend: site.url | replace: '//', '/' }}" rel="author">{{ site.data.authors[page.author].name }}</a>
 					</h2>
 					<div class="author-bio">
 						{{ site.data.authors[page.author].bio }}
@@ -90,7 +90,7 @@ layout: default
 				<div id="disqus_thread"></div>
 				<script>
 					var disqus_config = function () {
-						this.page.url = "http://bunkerliterario.github.io{{ page.url }}";
+						this.page.url = "https://bunkerliterario.github.io{{ page.url }}";
 						this.page.identifier = "{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | remove: " -" | replace: " ", "-" | downcase }}";
 					};
 					(function() { // DON'T EDIT BELOW THIS LINE
