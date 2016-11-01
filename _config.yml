@@ -9,7 +9,9 @@ author:
   name:			'Andre Santos'
   url:			https://twitter.com/andre_scutieri
 
-gems: ['jekyll-paginate']
+gems: 
+  - jekyll-paginate
+  - jekyll-seo-tag
 
 paginate:			5
 

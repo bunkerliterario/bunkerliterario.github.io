@@ -3,6 +3,8 @@ layout: post
 title: NaNoWriMo Dia #0
 author: andre
 short: Novembro já chegou! E para inaugurar com tudo o **Bunker Literário**, preservando o espírito da liberdade literária e exploração de novos temas por meio da escrita, o Bunker está participando do tradicional **NaNoWriMo**, o *National Novel Writing Month*, evento de porte já internacional que busca incentivar a escrita e leitura através de um desafio de **escrever uma história de ficção com no mínimo 50 mil palavras em um mês**. Embora o número possa assustar, o verdadeiro objetivo da brincadeira é o auto-desafio de escrever o máximo possível durante o mês de novembro.
+description: Novembro já chegou! E para inaugurar com tudo o **Bunker Literário**, preservando o espírito da liberdade literária e exploração de novos temas por meio da escrita, o Bunker está participando do tradicional **NaNoWriMo**, o *National Novel Writing Month*, evento de porte já internacional que busca incentivar a escrita e leitura através de um desafio de **escrever uma história de ficção com no mínimo 50 mil palavras em um mês**. Embora o número possa assustar, o verdadeiro objetivo da brincadeira é o auto-desafio de escrever o máximo possível durante o mês de novembro.
+image: https://bunkerliterario.github.io/assets/posts/nanowrimo-day0.jpg
 thumbnail: https://bunkerliterario.github.io/assets/posts/nanowrimo-day0.jpg
 caption: NaNoWriMo Dia 0
 comments: true
