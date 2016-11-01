@@ -66,7 +66,7 @@ title: Home
 
 					{% if post.short %}
 
-						{{ post.short }}
+						{{ post.short  | markdownify }}
 
 						<p><span class="read-more"> <a href="https://{{ post.url | prepend: site.url | replace: '//', '/' }}" class="more-link">Leia Mais</a></span></p>
 
