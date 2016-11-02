@@ -16,7 +16,7 @@ No primeiro dia vamos começar planejando nossa história e nosso desempenho. O 
 
 Para começar, o Bunker montou um calendário com os objetivos de escrita para cada dia do mês de novembro. Não se preocupe se você não conseguir bater a meta diária, os números são apenas uma sugestão. Há espaço em cada quadro para que você adicione suas próprias metas, avisos e informações! [Baixe o PDF aqui](https://bunkerliterario.github.io/assets/downloads/nanowrimo2016-calendario.pdf).
 
-![Calendário NaNoWriMo 2016](https://bunkerliterario.github.io/assets/nanowrimo-day1-calendario.jpg)
+![Calendário NaNoWriMo 2016](https://bunkerliterario.github.io/assets/nanowrimo-day1-calendario.png)
 
 Para amanhã, começaremos (finalmente) a escrever nossa história aqui do Bunker e podemos falar sobre construção de enredos.
 
